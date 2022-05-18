@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Intro component with sign up form</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/app.js"></script>
+
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="left">
+      <h1 class="signup-title">Learn to code by watching other</h1>
+      <p class="signup-description">See how experienced developers solve problems in real-time. Watching scripted
+        tutorials is great,
+        but understanding how developers think is invaluable.</p>
+    </div>
+    <div class="right">
+      <div>
+        <p class="form-trial">Try it free 7 days then $20/mo. thereafter</p>
+        <div class="form-container">
+          <form class="form" action="">
+            <div class="form-control">
+              <input class="form-inputs form-text form-fname" name="fname" type="text" placeholder="First Name">
+              <img class="form-error-icon" src="images/icon-error.svg" alt="">
+              <span class="form-error-msg">Error</span>
+            </div>
+            <div class="form-control">
+              <input class="form-inputs form-text form-lname" name="lname" type="text" placeholder="Last Name">
+              <img class="form-error-icon" src="images/icon-error.svg" alt="">
+              <span class="form-error-msg">Error</span>
+            </div>
+            <div class="form-control">
+              <input class="form-inputs form-text form-email" name="email" type="email" placeholder="Email Address">
+              <img class="form-error-icon" src="images/icon-error.svg" alt="">
+              <span class="form-error-msg">Error</span>
+            </div>
+            <div class="form-control">
+              <input class="form-inputs form-text form-pwd" name="pwd" type="password" placeholder="Password">
+              <img class="form-error-icon" src="images/icon-error.svg" alt="">
+              <span class="form-error-msg">Error</span>
+            </div>
+            <button class="form-button form-button-text" type="submit">Claim your free trial</button>
+          </form>
+          <p class="form-terms">By clicking the button, you are agreeing to our <span class="form-terms-red">Terms and
+              Services</span> </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </p>
+  </footer> -->
+</body>
+
+</html>

@@ -1,0 +1,278 @@
+:root {
+    /* Colours */
+    --Red: #FF7979;
+    --Green: #38CC8B;
+    --Purple: #5E54A4;
+    --Black: #3D3B48;
+    --White: #FFFFFF;
+    --Light-Grey: #DEDEDE;
+    /* Fonts */
+    --Font-Weight-400: 400;
+    --Font-Weight-500: 500;
+    --Font-Weight-600: 600;
+    --Font-Weight-700: 700;
+
+    --Border-Radius: 1rem;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    /* automatically inherit box-sizing from the body element */
+    /* box-sizing: inherit; */
+    box-sizing: border-box;
+}
+
+/* setting the root font-size  */
+html {
+    box-sizing: border-box;
+    /* change to 1px so that we know that 1rem will equal 10px */
+    /* change the 10px to a percentage which will translate to the percentage given by the browser */
+    /* 10/16*100 */
+    /* this method is used when a user decides to adjust the font size on the browser  */
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--Red);
+    color: var(--White);
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left {
+    width: 52.5rem;
+    max-width: 100%;
+    padding-right: 4.5rem;
+}
+
+.signup-title {
+    font-weight: var(--Font-Weight-700);
+    font-size: 5.0rem;
+    line-height: 5.5rem;
+    letter-spacing: -0.520833px;
+}
+
+.signup-description {
+    font-weight: var(--Font-Weight-500);
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    padding: 4rem;
+}
+
+.form-control {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.form-control.error .form-inputs {
+    border: 2px solid var(--Red);
+    margin-bottom: 2rem;
+}
+
+.form-control.error .form-error-icon {
+    visibility: visible;
+}
+
+.form-control.error .form-error-msg {
+    visibility: visible;
+}
+
+
+
+.form-container {
+    background-color: var(--White);
+    box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.14688);
+    border-radius: var(--Border-Radius);
+    height: 54rem;
+}
+
+.form-inputs {
+    width: 100%;
+    border: 0.1rem solid var(--Light-Grey);
+    padding: 1.5rem 3.2rem;
+    border-radius: var(--Border-Radius);
+    caret-color: var(--Purple);
+}
+
+.form-error-icon {
+    visibility: hidden;
+    position: absolute;
+    right: 5%;
+    top: 23%;
+}
+
+.form-error-msg {
+    visibility: hidden;
+    color: var(--Red);
+    font-style: italic;
+    font-weight: var(--Font-Weight-500);
+    font-size: 11px;
+    line-height: 16px;
+    text-align: right;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.msg-fname {
+    position: absolute;
+    right: 5rem;
+    top: 10rem;
+}
+
+.msg-lname {
+    position: absolute;
+    right: 5rem;
+    top: 18rem;
+}
+
+.msg-email {
+    position: absolute;
+    right: 5rem;
+    top: 26rem;
+}
+
+.msg-pwd {
+    position: absolute;
+    right: 5rem;
+    top: 33.5rem;
+}
+
+.form-text {
+    font-weight: var(--Font-Weight-600);
+    font-size: 1.4rem;
+    line-height: 2.6rem;
+    letter-spacing: 0.25px;
+    color: var(--Black);
+
+}
+
+.form-inputs::placeholder {
+    font-weight: var(--Font-Weight-600);
+    font-size: 1.5rem;
+    line-height: 2.6rem;
+    letter-spacing: 0.1rem;
+
+}
+
+.form-trial {
+    width: 54rem;
+    text-align: center;
+    margin-bottom: 2.4rem;
+    background: var(--Purple);
+    padding: 1.7rem;
+    border-radius: var(--Border-Radius);
+    box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.14688);
+}
+
+.form-button {
+    background: var(--Green);
+    box-shadow: inset 0px -4px 0px rgba(0, 0, 0, 0.0908818);
+    border-radius: 5px;
+    border: var(--Green);
+    padding: 1.5rem 0;
+    cursor: pointer;
+}
+
+.form-button:hover {
+    opacity: 0.7;
+}
+
+
+
+.form-button-text {
+    font-weight: var(--Font-Weight-600);
+    font-size: 1.5rem;
+    line-height: 2.6rem;
+    letter-spacing: 0.1rem;
+    color: var(--White);
+    text-transform: uppercase;
+    text-align: center;
+
+}
+
+.form-terms {
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 26px;
+    /* identical to box height, or 236% */
+
+    text-align: center;
+
+    color: #BAB7D4;
+}
+
+.form-terms-red {
+    color: var(--Red);
+    font-weight: var(--Font-Weight-700)
+}
+
+
+@media only screen and (max-width: 90rem) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media only screen and (max-width: 60rem) {
+    .signup-title {
+        font-size: 2.8rem;
+        line-height: 3.6rem;
+        text-align: center;
+        letter-spacing: -0.291667px;
+    }
+
+    .signup-description {
+        font-size: 1.6rem;
+        line-height: 2.6rem;
+    }
+
+    .left {
+        width: 100%;
+        max-width: 100%;
+        padding-right: 0rem;
+        padding-bottom: 6.4rem;
+    }
+
+    .form {
+        padding: 2.4rem;
+    }
+
+    .form-terms {
+        padding-left: 3.9rem;
+        padding-right: 3.9rem;
+    }
+
+    .form-trial {
+        font-size: 1.5rem;
+        line-height: 2.6rem;
+        text-align: center;
+        letter-spacing: 0.267857px;
+        width: 100%;
+    }
+}
